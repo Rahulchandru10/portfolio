@@ -1,0 +1,222 @@
+.home {
+    font-size: 1.5rem; 
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+}
+
+.home p{
+    font-size: 20px;
+}
+
+.header-image {
+    width: 100%; /* Full width of the card */
+    max-width: 300px; /* Limit the image width to 300px */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    display: block; /* Center the image in the card */
+    margin: 35px auto; /* Center the image horizontally */
+}
+  
+.section .profile-text {
+    text-align: center; /* Center the text */
+    color: blue; /* Blue text color */
+    margin-top: 10px; /* Space above the text */
+}
+
+  
+.section {
+    padding: 40px; /* Increased padding for more space */
+    margin: 30px 90px;
+    border: 1px solid #ccc; /* Optional: adds a border for better visibility */
+    border-radius: 8px; /* Rounded corners */
+    background: #f9f9f9; /* Light background for contrast */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.section:hover {
+    transform: scale(1.02); /* Subtle scale effect on hover */
+}
+
+.section h2 {
+    font-size: 2rem; /* Larger heading size */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 15px; /* Space below heading */
+    border-bottom: 2px solid #007bff; /* Underline for emphasis */
+    padding-bottom: 10px; /* Padding below heading */
+}
+
+.section p {
+    line-height: 1.6; /* Improved line height for readability */
+    color: #555; /* Softer color for body text */
+}
+
+.section ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.section li {
+    margin-bottom: 20px; /* Space between projects */
+    padding: 15px; /* Padding for individual project items */
+    background: #fff; /* White background for project items */
+    border-radius: 5px; /* Rounded corners for project items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for items */
+}
+
+.section li strong {
+    font-size: 1.2rem; /* Slightly larger font for project titles */
+    color: #007bff; /* Color for project titles */
+}
+
+.section li p {
+    margin-top: 10px; /* Space above project description */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.welcome-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s forwards, fadeOut 1s forwards 2.2s;
+    z-index: 2;
+}
+
+.welcome-message h1 {
+    font-size: 2.5rem; /* Large size for desktop */
+}
+
+.welcome-message p {
+    font-size: 1.2rem; /* Default size for desktop */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.blurred::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.blurred-background {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: 999; /* Ensure it's above the content but below the modal */
+}
+
+.contact-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 50px; /* Increase padding for more space */
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Slightly larger shadow for effect */
+    z-index: 1000; /* Ensure it appears above other content */
+    width: 450px; /* Set a specific width */
+    max-width: 90%; /* Ensure it doesn't exceed screen width */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content {
+    /* padding: 5%; */
+    margin: 10px 90px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) { /* Tablets */
+    .welcome-message h1 {
+        font-size: 2rem; /* Smaller size for tablets */
+    }
+
+    .welcome-message p {
+        font-size: 1rem; /* Smaller size for tablets */
+    }
+
+    .section {
+        padding: 30px; /* Reduced padding for smaller screens */
+    }
+
+    .section h2 {
+        font-size: 1.75rem; /* Adjusted heading size */
+    }
+
+    .section li strong {
+        font-size: 1.1rem; /* Adjusted title size */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile Landscape */
+    .welcome-message h1 {
+        font-size: 1.75rem; /* Adjust for mobile landscape */
+    }
+
+    .welcome-message p {
+        font-size: 0.9rem; /* Adjust for mobile landscape */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile Portrait */
+    .welcome-message h1 {
+        font-size: 1.5rem; /* Smaller size for mobile portrait */
+    }
+
+    .welcome-message p {
+        font-size: 0.8rem; /* Smaller size for mobile portrait */
+    }
+}
