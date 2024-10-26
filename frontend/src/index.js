@@ -4,13 +4,16 @@ import './index.css';
 import Home from './Components/Home';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider,createBrowserRouter } from 'react-router-dom';
-import ContactMe from './Components/ContactMe';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const rt = createBrowserRouter(
   [
     {
       path : '/',
       element : <Home/>
+    },
+    {
+      path: '/portfolio',
+      element: <Home />
     },
     ]
 )
