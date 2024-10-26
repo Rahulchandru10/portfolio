@@ -4,11 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-<<<<<<< HEAD
 .env
-=======
-
->>>>>>> gh-pages
 # testing
 /coverage
 
